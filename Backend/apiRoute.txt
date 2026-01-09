@@ -1,0 +1,185 @@
+    ****parameter du site****
+url=>http://localhost:8000/api/parameter=>get
+reponse=>
+{
+    "id": 1,
+    "nom": "Naziha Nazzouha",
+    "logo": "1732637783_qrcode_chrome.png",
+    "email": "gueldichnaziha@gmail.com",
+    "tel": "29625454",
+    "adresse": "mlkjhg*ùm^lkohuytfdr",
+    "caisse": 0,
+    "created_at": "2024-11-26T16:13:23.000000Z",
+    "updated_at": "2024-11-26T16:18:34.000000Z"
+}
+        =>get les information du site
+
+    ****liste categories****
+url=>http://localhost:8000/api/tout_categorie=>get
+reponse=>
+[
+    {
+        "id": 7,
+        "nom": "catg3",
+        "logo": "1732819528_ea460a71295bbb47d74ec188099abe45.jpg"
+    },
+    {
+        "id": 5,
+        "nom": "categorie test",
+        "logo": ""
+    },
+    {
+        "id": 4,
+        "nom": "catg 2",
+        "logo": "1732725628_ea460a71295bbb47d74ec188099abe45.jpg"
+    }
+]
+    ****liste articles****
+url=>http://localhost:8000/api/tout_article=>get
+reponse=>
+[
+    {
+        "id": 5,
+        "nom": "jkmelet 7seb",
+        "logo": "1732819557_ce29e4ce904aa6128f138e6dd4e1b9e6.jpg",
+        "description": null,
+        "prix": 12,
+        "id_categorie": 7
+    },
+    {
+        "id": 4,
+        "nom": "article",
+        "logo": "1732817721_ea460a71295bbb47d74ec188099abe45.jpg",
+        "description": "test art\r\n                            hach hach",
+        "prix": 72,
+        "id_categorie": 4
+    },
+    {
+        "id": 1,
+        "nom": "article 123",
+        "logo": "1732737461_ce29e4ce904aa6128f138e6dd4e1b9e6.jpg",
+        "description": null,
+        "prix": null,
+        "id_categorie": 4
+    }
+]
+    ****filtrer les articles by categorie****
+url=>http://localhost:8000/api/article_par_categorie/4=>get
+reponse=>
+[
+    {
+        "id": 1,
+        "nom": "article 123",
+        "logo": "1732737461_ce29e4ce904aa6128f138e6dd4e1b9e6.jpg",
+        "description": null,
+        "prix": null,
+        "id_categorie": 4,
+        "etat": 0,
+        "created_at": "2024-11-27T19:57:41.000000Z",
+        "updated_at": "2024-11-27T20:05:10.000000Z",
+        "categories": {
+            "id": 4,
+            "nom": "catg 2",
+            "logo": "1732725628_ea460a71295bbb47d74ec188099abe45.jpg",
+            "etat": 0,
+            "created_at": "2024-11-27T16:39:18.000000Z",
+            "updated_at": "2024-11-27T16:43:02.000000Z"
+        }
+    },
+    {
+        "id": 4,
+        "nom": "article",
+        "logo": "1732817721_ea460a71295bbb47d74ec188099abe45.jpg",
+        "description": "test art\r\n                            hach hach",
+        "prix": 72,
+        "id_categorie": 4,
+        "etat": 0,
+        "created_at": "2024-11-28T18:15:21.000000Z",
+        "updated_at": "2024-11-28T18:16:32.000000Z",
+        "categories": {
+            "id": 4,
+            "nom": "catg 2",
+            "logo": "1732725628_ea460a71295bbb47d74ec188099abe45.jpg",
+            "etat": 0,
+            "created_at": "2024-11-27T16:39:18.000000Z",
+            "updated_at": "2024-11-27T16:43:02.000000Z"
+        }
+    }
+]
+    ****client ya3mil inscrit fel basa****
+url=>http://localhost:8000/api/inscrit_client=>post
+teb3athlou=>
+{
+    "nom":"Rannen",
+    "prenom":"Yosr",
+    "adresse":"Sfax,mharza",
+    "telephone":"12345678",
+    "email":"yosr@gmail.com",
+    "password":"123456789"
+}
+yraga3lik=>
+"Client créée !"
+****passer commande****
+url=>http://localhost:8000/api/passer_commende=>post
+teb3athlou=>
+{
+    "id_client":"1",
+}
+yraga3lik=>
+2=>id commende illi bch tsta3milha fel insertion des lignies cmnds
+
+****lignie commande****
+url=>http://localhost:8000/api/lignie_commende=>post
+teb3athlou=>
+{
+    "id_article":"2",
+    "prixU":"5",
+    "quantite":"3",
+    "id_commende":"2"
+}
+yraga3lik=>
+"Lignie affecter !"
+
+
+****login****
+url=>http://localhost:8000/api/auth/login=>post
+teb3athlou=>
+{
+    "email": "naziha@gamil.com",
+    "password": "123456789"
+}
+yraga3lik=>
+{
+    "success": true,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MzMwNjE5NjMsImV4cCI6MTczMzA2NTU2MywibmJmIjoxNzMzMDYxOTYzLCJqdGkiOiJQN3JQWW5JS2hYUzRqaGZuIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.MchrytVLxBDO1o9QQs0_YJK15vWDDc3lT60ZfjpXaNY",
+    "user": {
+        "id": 1,
+        "name": "Nazzouha assoula",
+        "email": "naziha@gamil.com",
+        "email_verified_at": "2024-11-24T20:47:31.000000Z",
+        "created_at": "2024-11-24T19:07:45.000000Z",
+        "updated_at": "2024-11-24T19:07:45.000000Z"
+    }
+}
+
+****reservation****
+url=>http://localhost:8000/api/passer_reservation=>post
+teb3athlou=>
+{
+    "id_client": "1",
+    "date": "2024/12/01",
+    "nb_pers": "6"
+}
+yraga3lik=>
+"Reservation affecter !"
+
+****contacte****
+url=>http://localhost:8000/api/contacter_nous=>post
+teb3athlou=>
+{
+    "nom": "nazzouha",
+    "email": "naziha@gmail.com",
+    "contenue": "azertyuiop^qsdfghjklmwxcvbn"
+}
+yraga3lik=>
+"Contacte envoyer !"

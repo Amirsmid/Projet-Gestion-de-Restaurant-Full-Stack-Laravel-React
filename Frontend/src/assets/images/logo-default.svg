@@ -1,0 +1,14 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle de fond -->
+  <circle cx="30" cy="30" r="28" fill="#ffbe33" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Couverts stylisés -->
+  <path d="M25 20 L25 40 M35 20 L35 40" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 25 L40 25 M20 35 L40 35" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Assiette -->
+  <circle cx="30" cy="30" r="15" fill="none" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Texte R -->
+  <text x="30" y="50" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">R</text>
+</svg>
